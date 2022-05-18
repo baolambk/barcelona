@@ -48,21 +48,10 @@ html {
     display: none;
 }
 
-@keyframes bell {
-    from {
-        transform: rotate(15deg);
-    }
-
-    to {
-        transform: rotate(-15deg);
-    }
-}
-
 .main-header .main-header-bell {
     font-size: 1.5rem;
     margin-right: 2rem;
     cursor: pointer;
-    animation: bell 0.5s 1s alternate linear infinite;
 }
 
 .mobile-menu {
@@ -83,7 +72,6 @@ html {
     top: 2rem;
     right: 2rem;
     cursor: pointer;
-    -webkit-tap-highlight-color: transparent;
 }
 
 
@@ -103,7 +91,6 @@ html {
 .mobile-menu-link {
     text-align: center;
     cursor: pointer;
-    -webkit-tap-highlight-color: transparent;
 }
 
 .mobile-menu-link a {
@@ -156,6 +143,7 @@ html {
     .main-header-link:hover>a,
     .main-header-link:active>a {
         background-color: var(--secondary-color);
+        border-radius: 5px;
         color: var(--primary-color);
     }
 
@@ -181,7 +169,7 @@ html {
     font-size: 3.2rem;
     font-weight: 200;
     margin: 1.5rem auto;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
 
 .barca-overview .barca-overview__subtitle {
@@ -334,6 +322,7 @@ html {
     color: var(--primary-color);
     text-align: left;
     max-width: 30rem;
+    border-radius: 5px;
 }
 
 .tour-month {
@@ -349,10 +338,11 @@ html {
 
 .tour-month::after {
     content: "Hết vé";
-    background-color: var(--primary-color);
+    background-color: red;
     color: var(--secondary-color);
     font-size: 12px;
     padding: 3px;
+    border-radius: 2px;
     margin-left: 0.5rem;
 }
 
@@ -418,6 +408,7 @@ html {
 
 .tour-card__info .tour-card__buy-btn {
     color: var(--primary-color);
+    margin-top: 8px;
     padding: 8px 16px;
     cursor: pointer;
     background-color: transparent;
@@ -487,6 +478,7 @@ html {
 }
 
 .contact-form input {
+    border-radius: 2px;
     padding: 0.5rem;
     border: 1px solid var(--primary-color);
 }
