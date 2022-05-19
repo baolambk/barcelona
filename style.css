@@ -203,22 +203,26 @@ html {
     color: var(--primary-color);
 }
 
-.barca .barca-subtitle {
-    color: rgba(20, 33, 61, 0.65);
-    margin-bottom: 8px;
-}
-
 .barca .barca-about {
     text-align: justify;
     margin: 0 auto;
 }
 
 .barca-members {
+    border: solid 1px var(--primary-color);
     display: grid;
     grid-template-columns: 1fr;
     justify-items: center;
-    padding: 0 2rem;
+    padding: 2rem;
     margin: 2rem auto 0;
+    background-color: var(--primary-color);
+}
+
+.barca-members-legend {
+    background-color: var(--secondary-color);
+    border: solid 1px var(--primary-color);
+    border-radius: 3px;
+    padding: 0 1rem;
 }
 
 
@@ -226,6 +230,7 @@ html {
     text-align: center;
     font-weight: 400;
     margin: 8px;
+    color: var(--secondary-color);
 }
 
 
@@ -322,10 +327,10 @@ html {
     color: var(--primary-color);
     text-align: left;
     max-width: 30rem;
-    border-radius: 5px;
 }
 
 .tour-month {
+    border: solid 1px var(--primary-color);
     padding: 0.2rem;
     line-height: 2;
 }
@@ -338,11 +343,12 @@ html {
 
 .tour-month::after {
     content: "Hết vé";
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: red;
     color: var(--secondary-color);
     font-size: 12px;
     padding: 3px;
-    border-radius: 2px;
+    border-radius: 1.5px;
     margin-left: 0.5rem;
 }
 
@@ -413,6 +419,7 @@ html {
     cursor: pointer;
     background-color: transparent;
     border: 1px solid var(--primary-color);
+    border-radius: 2px;
     transition: all 0.3s linear;
 }
 
@@ -633,6 +640,11 @@ html {
     .main-footer__links .main-footer__link:hover {
         transform: scale(1.2);
     }
+}
+
+.baolam-link {
+    text-decoration: none;
+    color: var(--primary-color);
 }
 
 @media screen and (min-width:62rem) {
