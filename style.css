@@ -48,12 +48,6 @@ html {
     display: none;
 }
 
-.main-header .main-header-bell {
-    font-size: 1.5rem;
-    margin-right: 2rem;
-    cursor: pointer;
-}
-
 .mobile-menu {
     position: fixed;
     top: 0;
@@ -99,13 +93,24 @@ html {
     font-weight: 500;
 }
 
-
-.open {
-
-    left: 0;
+.main-header-sign .sign-btn {
+    margin-right: 0.5rem;
+    cursor: pointer;
+    color: var(--primary-color);
+    border: solid 1px var(--primary-color);
+    border-radius: 2px;
+    padding: 3px;
 }
 
 /* media query for header */
+@media screen and (max-width:40rem) {
+
+    .main-header-sign {
+        display: grid;
+        padding-top: 50px;
+    }
+}
+
 @media screen and (min-width:40rem) {
     body {
         overflow-x: hidden;
@@ -150,7 +155,7 @@ html {
 }
 
 .barca-overview {
-    background: url('./Assets/campnoubg.jpeg') center/cover no-repeat;
+    background: url('./img/campnoubg.jpeg') center/cover no-repeat;
     width: 100%;
     height: 50vh;
     color: var(--secondary-color);
@@ -243,7 +248,7 @@ html {
 /* media query for main and barca section */
 @media screen and (min-width:40rem) {
     .barca-overview {
-        background: url('./Assets/campnoubg.jpeg') center/cover no-repeat;
+        background: url('./img/campnoubg.jpeg') center/cover no-repeat;
         height: calc(100vh - 52px);
     }
 
@@ -514,7 +519,7 @@ html {
 
 
 .map {
-    background: url("./Assets/penya-hanoi.jpeg") center/cover no-repeat;
+    background: url("./img/penya-hanoi.jpeg") center/cover no-repeat;
 }
 
 .main-footer {
