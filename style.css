@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Grape+Nuts&family=Oswald:wght@200;300&display=swap');
+
 * {
     padding: 0;
     margin: 0;
@@ -15,11 +18,16 @@ body,
 html {
     margin: 0;
     line-height: 1.4;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Oswald', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
 }
 
 .main-header {
-    background-color: var(--primary-color);
+    background-image: linear-gradient(90deg, rgb(205, 18, 45) 0px, rgb(21, 66, 132));
     color: var(--secondary-color);
     display: flex;
     justify-content: space-between;
@@ -40,75 +48,32 @@ html {
     cursor: pointer;
 }
 
-.main-header .mobile-menu__icon:focus {
-    outline: none;
-}
-
 .main-header .main-header-links {
     display: none;
 }
 
-.mobile-menu {
-    position: fixed;
-    top: 0;
-    left: -5000px;
-    z-index: 400;
-    width: 70%;
-    height: 100vh;
-    background-color: rgba(255, 255, 255, 0.96);
-    transition: left 0.7s;
-    color: var(--primary-color);
+.main-header-icon-lan {
+    display: none;
 }
 
-.mobile-menu .mobile-menu__close-btn {
-    position: absolute;
-    font-size: 1.5rem;
-    top: 2rem;
-    right: 2rem;
+.main-header-search {
+    margin-right: 1rem;
     cursor: pointer;
-}
-
-
-.mobile-menu .mobile-menu-links {
-    list-style-type: none;
-    margin: 2rem auto;
-    padding: 0px;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 1.5rem;
-    width: 80%;
-    height: 90%;
-    justify-items: center;
-    align-content: center;
-}
-
-.mobile-menu-link {
-    text-align: center;
-    cursor: pointer;
-}
-
-.mobile-menu-link a {
-    color: var(--primary-color);
-    text-decoration: none;
-    font-weight: 500;
-}
-
-.main-header-sign .sign-btn {
-    margin-right: 0.5rem;
-    cursor: pointer;
-    color: var(--primary-color);
-    border: solid 1px var(--primary-color);
-    border-radius: 2px;
-    padding: 3px;
+    line-height: 40px;
 }
 
 /* media query for header */
 @media screen and (max-width:40rem) {
-
-    .main-header-sign {
-        display: grid;
-        padding-top: 50px;
+    body {
+        overflow-x: hidden;
     }
+
+    .main-header-search input {
+        display: none
+    }
+
+    ;
+
 }
 
 @media screen and (min-width:40rem) {
@@ -118,6 +83,38 @@ html {
 
     .main-header .mobile-menu__icon {
         display: none;
+    }
+
+    .main-header-icon-lan {
+        display: block;
+        margin-left: 30rem;
+        cursor: pointer;
+    }
+
+    .main-header-lan {
+        position: relative;
+    }
+
+    .main-header-lan-list {
+        position: absolute;
+        list-style: none;
+        font-size: 12px;
+        display: none;
+        background-color: #a40047;
+        /* background-image: linear-gradient(90deg, rgb(205, 18, 45) 0px, rgb(21, 66, 132)); */
+    }
+
+    .main-header-lan-list li {
+        padding: 10px 5px 5px 5px;
+    }
+
+    .main-header-icon-lan .main-header-lan:hover .main-header-lan-list {
+        display: block;
+    }
+
+    .main-header-icon-lan .main-header-lan .main-header-lan-list li:hover {
+        background-color: var(--secondary-color);
+        color: #a40047;
     }
 
     .main-header .main-header-links {
@@ -152,6 +149,14 @@ html {
         color: var(--primary-color);
     }
 
+    .main-header-search-icon {
+        display: none;
+    }
+
+    .main-header-search {
+        display: block;
+    }
+
 }
 
 .barca-overview {
@@ -174,7 +179,6 @@ html {
     font-size: 3.2rem;
     font-weight: 200;
     margin: 1.5rem auto;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
 
 .barca-overview .barca-overview__subtitle {
@@ -211,6 +215,7 @@ html {
 .barca .barca-about {
     text-align: justify;
     margin: 0 auto;
+
 }
 
 .barca-members {
@@ -220,7 +225,7 @@ html {
     justify-items: center;
     padding: 2rem;
     margin: 2rem auto 0;
-    background-color: var(--primary-color);
+    background-image: linear-gradient(90deg, rgb(205, 18, 45) 0px, rgb(21, 66, 132));
 }
 
 .barca-members-legend {
@@ -230,6 +235,22 @@ html {
     padding: 0 1rem;
 }
 
+/* .barca-member {
+    position: relative;
+}
+
+.barca-member img {
+    position: absolute;
+    left: 0;
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+}
+
+.barca-member img.barca-member-image-2:hover {
+    opacity: 0;
+} */
 
 .barca-member-name {
     text-align: center;
@@ -243,6 +264,11 @@ html {
     width: 250px;
     height: 150px;
     border-radius: 5px;
+}
+
+.barca-audio {
+    margin-top: 3rem;
+    margin-bottom: -2rem;
 }
 
 /* media query for main and barca section */
@@ -308,7 +334,7 @@ html {
 }
 
 .tour {
-    background-color: var(--primary-color);
+    background-image: linear-gradient(90deg, rgb(205, 18, 45) 0px, rgb(21, 66, 132));
     color: var(--secondary-color);
     text-align: center;
     padding: 2rem 1.5rem;
@@ -334,6 +360,13 @@ html {
     max-width: 30rem;
 }
 
+.tour .tour-months a:hover {
+    background-color: #a40047;
+    color: #ffffff;
+    border-radius: 2px;
+    padding: 5px;
+}
+
 .tour-month {
     border: solid 1px var(--primary-color);
     padding: 0.2rem;
@@ -348,7 +381,6 @@ html {
 
 .tour-month::after {
     content: "Hết vé";
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: red;
     color: var(--secondary-color);
     font-size: 12px;
@@ -409,6 +441,8 @@ html {
 }
 
 .tour-card__info .tour-card__place {
+    text-decoration: none;
+    color: var(--primary-color);
     margin: 0px;
 }
 
@@ -419,7 +453,8 @@ html {
 
 .tour-card__info .tour-card__buy-btn {
     color: var(--primary-color);
-    margin-top: 8px;
+    margin-top: 32px;
+    margin-bottom: -16px;
     padding: 8px 16px;
     cursor: pointer;
     background-color: transparent;
@@ -463,10 +498,10 @@ html {
 
 .contact-area .contact-lists {
     list-style-type: none;
-    margin: 2rem auto;
     padding: 0;
     text-align: left;
     font-weight: 500;
+    align-self: center;
 }
 
 .contact-lists .contact-list {
@@ -486,6 +521,13 @@ html {
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 10px 20px;
+    padding: 32px;
+    /* background-image: linear-gradient(90deg, rgb(205, 18, 45) 0px, rgb(21, 66, 132)); */
+    background-color: #a40047;
+}
+
+.contact-fie {
+    border: solid 1px #a40047;
 }
 
 .contact-form input {

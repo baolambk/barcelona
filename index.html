@@ -6,11 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>FC Barcelona</title>
-    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.1/css/all.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="./img/1010px-FC_Barcelona_logo.svg.png" type="image/x-icon">
-
 </head>
 
 <body id="home">
@@ -24,20 +22,20 @@
                 <li class="main-header-link"><a href="#contact">Liên hệ</a></li>
             </ul>
         </nav>
-        <div class="main-header-sign">
-            Tài Khoản<input type="text"> Mật Khẩu<input type="password">
-            <button class="sign-btn">Đăng Nhập</button>
+        <div class="main-header-icon-lan">
+            <i class="fa-solid fa-earth-asia main-header-lan">
+                <ul class="main-header-lan-list">
+                    <li>ENG</li>
+                    <li>FRA</li>
+                    <li>ESP</li>
+                </ul>
+            </i> VN
+        </div>
+        <div class="main-header-search">
+            <i class="fa-solid fa-magnifying-glass main-header-search-icon"></i>
+            Tìm kiếm <input type="text">
         </div>
     </header>
-    <div class="mobile-menu">
-        <div class="fas fa-times mobile-menu__close-btn" title="Close"></div>
-        <ul class="mobile-menu-links">
-            <li class="mobile-menu-link"><a href="#home">Trang chủ</a></li>
-            <li class="mobile-menu-link"><a href="#about">Cầu thủ</a></li>
-            <li class="mobile-menu-link"><a href="#concerts">Mua vé</a></li>
-            <li class="mobile-menu-link"><a href="#contact">Liên hệ</a></li>
-        </ul>
-    </div>
     <main>
         <section class="barca-overview">
             <h2 class="barca-overview__title">FC Barcelona</h2>
@@ -45,7 +43,7 @@
             <div class="fas fa-caret-down scroll-indicator"></div>
         </section>
         <section class="barca" id="about">
-            <h2 class="barca-title">Đội hình</h2>
+            <h2 class="barca-title">Cầu thủ</h2>
             <blockquote class="barca-about">"Đội hình đến Việt Nam lần có sự góp mặt của những cầu thủ huyền thoại của
                 câu lạc bộ và những cầu thủ đã giành vô số danh hiệu cao quý ở
                 cả cấp độ câu lạc bộ và đội tuyển quốc gia" - Trích lời HLV Xavi
@@ -74,6 +72,7 @@
                     <h3 class="barca-member-name">Romario</h3>
                     <div class="barca-member__image-container">
                         <img class="barca-member__image" src="./img/romario.jpeg" alt="legend">
+
                     </div>
                 </div>
                 <div class="barca-member">
@@ -115,18 +114,17 @@
             <p class="tour-subtitle">Vé đang được mở bán</p>
 
             <ul class="tour-months">
-                <li class="tour-month">Tháng 6</li>
-                <li class="tour-month">Tháng 7</li>
-                <li class="tour-month">Tháng 8</li>
+                <li class="tour-month"><a href="#tour-hn">Tháng 6</a> </li>
+                <li class="tour-month"><a href="#tour-hp">Tháng 7</a> </li>
+                <li class="tour-month"><a href="#tour-tp-hcm">Tháng 8</a> </li>
             </ul>
-
             <div class="tour-cards">
                 <div class="tour-card">
                     <div class="tour-card__image-container">
                         <div class="tour-card__image-overlay"></div>
                         <img class="tour-card__image" src="./img/San-My-Dinh-Tren-Cao-01.jpeg" alt="Mỹ Đình">
                     </div>
-                    <div class="tour-card__info">
+                    <div class="tour-card__info" id="tour-hn">
                         <h3 class="tour-card__place">Hà Nội</h3>
                         <p class="tour-card__date">Ngày 6 tháng 6 năm 2022</p>
                         <p class="tour-card__about">Sân vận động Mỹ Đình</p>
@@ -138,7 +136,7 @@
                         <div class="tour-card__image-overlay"></div>
                         <img class="tour-card__image" src="./img/lachtray.jpeg" alt="Lạch Tray">
                     </div>
-                    <div class="tour-card__info">
+                    <div class="tour-card__info" id="tour-hp">
                         <h3 class="tour-card__place">Hải Phòng</h3>
                         <p class="tour-card__date">Ngày 7 tháng 7 năm 2022</p>
                         <p class="tour-card__about">Sân vận động Lạch Tray</p>
@@ -151,7 +149,7 @@
                         <img class="tour-card__image"
                             src="./img/193cb610d9023520e25fbfcf63421c82.san-van-dong-thong-nhat.jpg" alt="Thống Nhất">
                     </div>
-                    <div class="tour-card__info">
+                    <div class="tour-card__info" id="tour-tp-hcm">
                         <h3 class="tour-card__place">TP Hồ Chí Minh</h3>
                         <p class="tour-card__date">Ngày 8 tháng 8 năm 2022</p>
                         <p class="tour-card__about">Sân Thống Nhất</p>
@@ -178,12 +176,15 @@
                         <p>Email: barca@gmail.com</p>
                     </li>
                 </ul>
-                <form action="" class="contact-form">
-                    <input type="text" name="name" placeholder="Name">
-                    <input type="email" name="email" placeholder="Email">
-                    <input type="text" name="message" placeholder="Message">
-                    <input type="submit" value="SEND">
-                </form>
+                <fieldset class="contact-fie">
+                    <form action="" class="contact-form">
+                        <input type="text" name="name" placeholder="Name">
+                        <input type="email" name="email" placeholder="Email">
+                        <input type="text" name="message" placeholder="Message">
+                        <input type="submit" value="SEND">
+                    </form>
+                </fieldset>
+
             </div>
         </section>
         <section class="map">
